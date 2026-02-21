@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth lang-th">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alex Chen — Developer</title>
+
+<!-- Tailwind CDN + custom config -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:    '#111110',
+          surface:'#161615',
+          border: '#222220',
+          mid:    '#555552',
+          soft:   '#888884',
+          dim:    '#d4d4d0',
+          bright: '#f0f0ec',
+        },
+        fontFamily: {
+          mono:  ['"Geist Mono"', 'monospace'],
+          serif: ['"EB Garamond"', 'serif'],
+          thai:  ['Sarabun', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Geist+Mono:wght@300;400;500&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body class="bg-ink text-dim text-[13px] leading-relaxed antialiased">
+
+<!-- ════════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-ink/90 backdrop-blur-md">
+  <div class="max-w-[680px] mx-auto px-8 h-[50px] flex items-center justify-between">
+
+    <a href="#" class="font-display text-[1.05rem] font-medium text-bright tracking-tight no-underline">
+      Alex Chen
+    </a>
+
+    <div class="flex items-center gap-8">
+      <!-- Nav links -->
+      <ul class="hidden md:flex gap-8 list-none">
+        <li>
+          <a id="navSkills" href="#skills"
+            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
+          </a>
+        </li>
+        <li>
+          <a id="navWork" href="#projects"
+            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
+          </a>
+        </li>
+        <li>
+          <a id="navExperience" href="#experience"
+            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
+          </a>
+        </li>
+        <li>
+          <a id="navContact" href="#contact"
+            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
+          </a>
+        </li>
+      </ul>
+
+      <!-- Language toggle -->
+      <div class="flex items-center border border-border overflow-hidden flex-shrink-0">
+        <button id="btnTh" onclick="setLang('th')"
+          class="bg-bright text-ink px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150">
+          TH
+        </button>
+        <div class="w-px bg-border self-stretch"></div>
+        <button id="btnEn" onclick="setLang('en')"
+          class="bg-transparent text-mid px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150 hover:text-bright">
+          EN
+        </button>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════
+     PAGE CONTENT
+════════════════════════════════════════ -->
+<div class="max-w-[680px] mx-auto px-8">
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="pt-36 pb-24 border-b border-border">
+
+    <!-- Status badge -->
+    <div class="flex items-center gap-2.5 text-mid mb-10 animate-fade-up-1">
+      <span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80] status-dot"></span>
+      <span id="heroStatus" class="text-[11px] tracking-widest uppercase"></span>
+    </div>
+
+    <!-- Headline -->
+    <h1 id="heroTitle"
+      class="font-display text-[clamp(2.4rem,6vw,4rem)] font-normal leading-[1.15] tracking-tight text-bright mb-7 animate-fade-up-2">
+    </h1>
+
+    <!-- Description -->
+    <p id="heroDesc"
+      class="text-[13px] text-soft leading-[1.9] max-w-[460px] mb-12 animate-fade-up-3">
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="flex gap-6 items-center animate-fade-up-4">
+      <a id="btnWork" href="#projects"
+        class="btn-text inline-block px-6 py-2.5 bg-bright text-ink border border-bright
+               hover:bg-dim hover:border-dim transition-colors duration-150 no-underline">
+      </a>
+      <a id="btnContact" href="#contact"
+        class="btn-text inline-block px-6 py-2.5 border border-border text-dim
+               hover:border-soft hover:text-bright transition-colors duration-150 no-underline">
+      </a>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <div class="grid grid-cols-4 border-b border-border">
+    <div class="py-5 pr-4 border-r border-border">
+      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
+        data-count="6">0</span>
+      <span class="stat-label text-mid" data-stat-key="years"></span>
+    </div>
+    <div class="py-5 px-4 border-r border-border">
+      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
+        data-count="48">0</span>
+      <span class="stat-label text-mid" data-stat-key="projects"></span>
+    </div>
+    <div class="py-5 px-4 border-r border-border">
+      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
+        data-count="12">0</span>
+      <span class="stat-label text-mid" data-stat-key="clients"></span>
+    </div>
+    <div class="py-5 pl-4">
+      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
+        data-count="98">0</span>
+      <span class="stat-label text-mid" data-stat-key="satisfaction"></span>
+    </div>
+  </div>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="py-22 border-b border-border">
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="sec-label text-mid">01</span>
+      <h2 id="secSkills"
+        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+    </div>
+    <div id="skillsList"></div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="py-22 border-b border-border">
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="sec-label text-mid">02</span>
+      <h2 id="secWork"
+        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+    </div>
+    <div id="projectsList"></div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience" class="py-22 border-b border-border">
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="sec-label text-mid">03</span>
+      <h2 id="secExp"
+        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+    </div>
+    <div id="expList"></div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="py-22">
+    <div class="flex items-baseline gap-5 mb-12">
+      <span class="sec-label text-mid">04</span>
+      <h2 id="secContact"
+        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+      <!-- Contact info -->
+      <div>
+        <p id="contactHeading"
+          class="font-display text-[1.3rem] leading-[1.6] font-normal text-bright mb-8"></p>
+        <div class="flex flex-col">
+          <a id="contactEmail" href="mailto:alex@example.com"
+            class="flex justify-between items-center py-3.5 border-t border-border text-soft
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
+          </a>
+          <a id="contactGithub" href="https://github.com" target="_blank"
+            class="flex justify-between items-center py-3.5 border-t border-border text-soft
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
+          </a>
+          <a id="contactLinkedin" href="https://linkedin.com" target="_blank"
+            class="flex justify-between items-center py-3.5 border-t border-b border-border text-soft
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form id="contactForm" class="flex flex-col gap-5">
+        <div class="grid grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label id="labelName"
+              class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+            <input id="fName" type="text"
+              class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
+                     outline-none placeholder-mid focus:border-soft transition-colors duration-150"
+              autocomplete="off"/>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label id="labelEmail"
+              class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+            <input id="fEmail" type="email"
+              class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
+                     outline-none placeholder-mid focus:border-soft transition-colors duration-150"
+              autocomplete="off"/>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label id="labelMsg"
+            class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+          <textarea id="fMsg" rows="5"
+            class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
+                   outline-none placeholder-mid focus:border-soft transition-colors duration-150 resize-none">
+          </textarea>
+        </div>
+        <button id="submitBtn" type="submit"
+          class="btn-text self-start px-6 py-2.5 bg-bright text-ink border border-bright
+                 hover:bg-dim hover:border-dim transition-colors duration-150 cursor-pointer">
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+</div><!-- /max-w wrapper -->
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer class="border-t border-border py-7">
+  <div class="max-w-[680px] mx-auto px-8 flex justify-between items-center">
+    <span id="footerCopy" class="text-[11px] text-mid"></span>
+    <div class="flex gap-6">
+      <a id="footerGithub"   href="#"
+        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerLinkedin" href="#"
+        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerResume"   href="#"
+        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+    </div>
+  </div>
+</footer>
+
+<!-- External JS (loads data.json internally) -->
+<script src="portfolio.js"></script>
+
+</body>
+</html>

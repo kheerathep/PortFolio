@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════
+   portfolio.css
+   Styles that extend / override Tailwind
+   ═══════════════════════════════════════ */
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: #111110; }
+::-webkit-scrollbar-thumb { background: #222220; }
+
+/* ── Language-aware font switching ── */
+html.lang-en body             { font-family: 'Geist Mono', monospace; }
+html.lang-th body             { font-family: 'Sarabun', sans-serif; font-size: 14px; }
+
+html.lang-en .font-display    { font-family: 'EB Garamond', serif; }
+html.lang-th .font-display    { font-family: 'Sarabun', sans-serif; font-weight: 500; }
+
+html.lang-en .nav-link        { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.07em; }
+html.lang-th .nav-link        { font-family: 'Sarabun', sans-serif; font-size: 13px; }
+
+html.lang-en .btn-text        { font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; }
+html.lang-th .btn-text        { font-family: 'Sarabun', sans-serif; font-size: 13px; letter-spacing: 0; text-transform: none; }
+
+html.lang-en .stat-label      { font-size: 10px; letter-spacing: 0.09em; text-transform: uppercase; }
+html.lang-th .stat-label      { font-family: 'Sarabun', sans-serif; font-size: 11px; }
+
+html.lang-en .sec-label       { font-size: 11px; letter-spacing: 0.06em; }
+html.lang-th .sec-label       { font-family: 'Sarabun', sans-serif; font-size: 12px; }
+
+html.lang-th .proj-desc,
+html.lang-th .exp-desc        { font-size: 13px; line-height: 1.9; }
+
+html.lang-th h1               { letter-spacing: 0; line-height: 1.45; }
+html.lang-th h1 em            { font-style: normal; }
+html.lang-en h1               { font-family: 'EB Garamond', serif; }
+
+/* ── Scroll-reveal rows ── */
+.anim-row {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.anim-row.vis {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Skill bar fill ── */
+.sk-fill {
+  width: 0;
+  transition: width 0.9s cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ── Status dot pulse ── */
+@keyframes pulse2 {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.2; }
+}
+.status-dot { animation: pulse2 2.5s ease infinite; }
+
+/* ── Hero fade-up animations ── */
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+.animate-fade-up-1 { animation: fadeUp 0.45s 0.05s both; }
+.animate-fade-up-2 { animation: fadeUp 0.45s 0.15s both; }
+.animate-fade-up-3 { animation: fadeUp 0.45s 0.25s both; }
+.animate-fade-up-4 { animation: fadeUp 0.45s 0.35s both; }
