@@ -2,12 +2,12 @@
   "i18n": {
     "hero": {
       "en": {
-        "title": "Full-stack engineer<br>building <em class=\"italic text-soft\">thoughtful</em><br>software.",
-        "desc": "I design and build web applications, APIs, and developer tools with a focus on clarity, performance, and longevity. Based in Bangkok — working globally."
+        "title": "Full-stack Dev <br> building thoughtful software",
+        "desc": "Designing and developing web apps, APIs, and software with clarity and efficiency — working with clients worldwide."
       },
       "th": {
-        "title": "วิศวกร Full-Stack<br>ผู้สร้างซอฟต์แวร์<br><em>ที่ใส่ใจในทุกรายละเอียด</em>",
-        "desc": "ฉันออกแบบและพัฒนาเว็บแอปพลิเคชัน, API และเครื่องมือสำหรับนักพัฒนา โดยเน้นความชัดเจน ประสิทธิภาพ และความยั่งยืน ตั้งอยู่ที่กรุงเทพฯ — ทำงานกับลูกค้าทั่วโลก"
+        "title": "Full-stack Dev <br> สร้างซอฟต์แวร์ที่ใส่ใจในรายละเอียด",
+        "desc": "รับออกแบบและพัฒนาเว็บแอปพลิเคชัน, API และแอปพลิเคชั้น โดยเน้นความชัดเจน ประสิทธิภาพ — ทำงานกับลูกค้าทั่วโลก"
       }
     },
     "contactHeading": {
