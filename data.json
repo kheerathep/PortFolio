@@ -11,8 +11,8 @@
       }
     },
     "contactHeading": {
-      "en": "Open to full-time roles<br>and select freelance projects.",
-      "th": "พร้อมรับตำแหน่งงานประจำ<br>และรับงานฟรีแลนซ์คัดสรร"
+      "en": "Available for freelance work",
+      "th": "รับงานฟรีแลนซ์"
     },
     "form": {
       "en": { "name": "",    "email": "",  "msg": "Tell me about your project..." },
