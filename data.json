@@ -160,13 +160,13 @@
         "name": "NakhonFit",
         "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
         "desc": "เว็บไซต์สำหรับค้นหาฟิตเนสและยิมในจังหวัดนครปฐม พร้อมข้อมูลรีวิวและแผนที่นำทาง",
-        "github": "https://github.com/kheerathep/web-app-project-Fitness#", "live": "https://projectwebapp-21778896-214e7.web.app/"
+        "github": "https://github.com/kheerathep/web-app-project-Fitness#", "live": "#"
       },
       {
         "name": "Portfolio Website",
         "tags": ["html", "css", "javascript","Json"],
         "desc": "เว็บไซต์ Portfolio ของฉัน แสดงผลงานและประสบการณ์การทำงาน",
-        "github": "https://github.com/kheerathep", "live": "https://kheerathep-portfolio.web.app/"
+        "github": "https://github.com/kheerathep", "live": "#"
       }
     ]
   },
