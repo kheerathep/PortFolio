@@ -15,16 +15,8 @@
       "th": "พร้อมรับตำแหน่งงานประจำ<br>และรับงานฟรีแลนซ์คัดสรร"
     },
     "form": {
-      "en": {
-        "name": "Jane Doe",
-        "email": "jane@co.com",
-        "msg": "Tell me about your project..."
-      },
-      "th": {
-        "name": "สมศรี ใจดี",
-        "email": "somsi@co.th",
-        "msg": "บอกเล่าเกี่ยวกับโปรเจกต์ของคุณ..."
-      }
+      "en": { "name": "",    "email": "",  "msg": "Tell me about your project..." },
+      "th": { "name": "", "email": "",  "msg": "บอกเล่าเกี่ยวกับโปรเจกต์ของคุณ..." }
     },
     "nav": {
       "skills":     { "en": "Skills",      "th": "ทักษะ" },
@@ -32,22 +24,28 @@
       "experience": { "en": "Exp.",        "th": "ประสบการณ์" },
       "contact":    { "en": "Contact",     "th": "ติดต่อ" }
     },
-    "status":       { "en": "Available for work", "th": "พร้อมรับงานใหม่" },
-    "btnWork":      { "en": "View work",   "th": "ดูผลงาน" },
-    "btnContact":   { "en": "Get in touch","th": "ติดต่อฉัน" },
-    "btnSend":      { "en": "Send",        "th": "ส่งข้อความ" },
-    "btnSent":      { "en": "Sent ✓",      "th": "ส่งแล้ว ✓" },
-    "secSkills":    { "en": "Skills",      "th": "ทักษะ" },
-    "secWork":      { "en": "Selected work","th": "ผลงานที่เลือก" },
-    "secExp":       { "en": "Experience",  "th": "ประสบการณ์" },
-    "secContact":   { "en": "Get in touch","th": "ติดต่อฉัน" },
-    "liveLbl":      { "en": "Live ↗",      "th": "ดูสด ↗" },
-    "githubLbl":    { "en": "GitHub ↗",    "th": "GitHub ↗" },
+    "status":     { "en": "Available for work", "th": "พร้อมรับงานใหม่" },
+    "btnWork":    { "en": "View work",    "th": "ดูผลงาน" },
+    "btnContact": { "en": "Get in touch", "th": "ติดต่อฉัน" },
+    "btnSend":    { "en": "Send",         "th": "ส่งข้อความ" },
+    "btnSent":    { "en": "Sent ✓",       "th": "ส่งแล้ว ✓" },
+    "secSkills":  { "en": "Skills & Tools", "th": "ทักษะและเครื่องมือ" },
+    "secWork":    { "en": "Selected work","th": "ผลงานที่เลือก" },
+    "secExp":     { "en": "Experience",   "th": "ประสบการณ์" },
+    "secContact": { "en": "Get in touch", "th": "ติดต่อฉัน" },
+    "liveLbl":    { "en": "Live ↗",       "th": "ดูสด ↗" },
+    "githubLbl":  { "en": "GitHub ↗",     "th": "GitHub ↗" },
+    "skillGroups": {
+      "languages": { "en": "Languages",   "th": "ภาษา" },
+      "frontend":  { "en": "Frontend",    "th": "Frontend" },
+      "backend":   { "en": "Backend",     "th": "Backend" },
+      "tools":     { "en": "Tools",       "th": "เครื่องมือ" }
+    },
     "stats": {
-      "years":        { "en": "Years exp.", "th": "ปีประสบการณ์" },
-      "projects":     { "en": "Projects",   "th": "โปรเจกต์" },
-      "clients":      { "en": "Clients",    "th": "ลูกค้า" },
-      "satisfaction": { "en": "Satisfaction","th": "% ความพึงพอใจ" }
+      "years":        { "en": "Years exp.",   "th": "ปีประสบการณ์" },
+      "projects":     { "en": "Projects",     "th": "โปรเจกต์" },
+      "clients":      { "en": "Clients",      "th": "ลูกค้า" },
+      "satisfaction": { "en": "Satisfaction", "th": "% ความพึงพอใจ" }
     },
     "footer": {
       "github":   { "en": "GitHub",   "th": "GitHub" },
@@ -63,74 +61,112 @@
     { "key": "satisfaction", "value": 98 }
   ],
 
-  "skills": [
-    { "name": "TypeScript / JavaScript", "pct": 95 },
-    { "name": "React / Next.js",         "pct": 92 },
-    { "name": "Node.js / Go",            "pct": 88 },
-    { "name": "HTML / CSS",              "pct": 96 },
-    { "name": "PostgreSQL / Redis",      "pct": 85 },
-    { "name": "Docker / Kubernetes",     "pct": 78 }
+  "skillGroups": [
+    {
+      "key": "languages",
+      "skills": [
+        {
+          "label": { "en": "HTML5",       "th": "HTML5" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+        },
+        {
+          "label": { "en": "CSS3",        "th": "CSS3" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        },
+        {
+          "label": { "en": "JavaScript",  "th": "JavaScript" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        },
+        {
+          "label": { "en": "TypeScript",  "th": "TypeScript" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+        },
+        {
+          "label": { "en": "Java",        "th": "Java" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        },
+        {
+          "label": { "en": "SQL",         "th": "SQL" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        }
+      ]
+    },
+    {
+      "key": "frontend",
+      "skills": [
+        {
+          "label": { "en": "React",       "th": "React" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
+        {
+          "label": { "en": "Tailwind CSS","th": "Tailwind CSS" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+        }
+      ]
+    },
+    {
+      "key": "backend",
+      "skills": [
+        {
+          "label": { "en": "Node.js",     "th": "Node.js" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        },
+        {
+          "label": { "en": "Firebase",    "th": "Firebase" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+        }
+      ]
+    },
+    {
+      "key": "tools",
+      "skills": [
+        {
+          "label": { "en": "Git",         "th": "Git" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+        },
+        {
+          "label": { "en": "GitHub",      "th": "GitHub" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        },
+        {
+          "label": { "en": "VS Code",     "th": "VS Code" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+        },
+        {
+          "label": { "en": "Visual Studio","th": "Visual Studio" },
+          "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+        }
+      ]
+    }
   ],
 
   "projects": {
     "en": [
       {
-        "name": "VaultDB Studio",
-        "tags": ["TypeScript", "React", "Go"],
+        "name": "NakhonFit",
+        "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
         "desc": "A modern database GUI with query history, schema visualization, and real-time collaboration.",
-        "github": "#",
-        "live": "#"
+        "github": "#", "live": "#"
       },
       {
-        "name": "Blaze API Gateway",
-        "tags": ["Node.js", "Redis", "Docker"],
-        "desc": "High-throughput API gateway handling 50k req/s with rate limiting, auth, and analytics.",
-        "github": "#",
-        "live": "#"
-      },
-      {
-        "name": "DevCollab",
-        "tags": ["Next.js", "PostgreSQL", "Stripe"],
-        "desc": "Subscription platform connecting junior developers with senior engineers for async code review.",
-        "github": "#",
-        "live": "#"
-      },
-      {
-        "name": "create-ts-app",
-        "tags": ["TypeScript", "CLI", "npm"],
-        "desc": "Opinionated TypeScript scaffolding CLI. 2k+ weekly downloads. Zero configuration to start.",
-        "github": "#",
-        "live": "#"
+        "name": "Portfolio Website",
+        "tags": ["html", "css", "javascript","Json"],
+        "desc": "My personal portfolio website showcasing my projects and work experience.",
+        "github": "https://github.com/kheerathep", "live": "https://kheerathep-portfolio.web.app/"
       }
     ],
     "th": [
       {
-        "name": "VaultDB Studio",
-        "tags": ["TypeScript", "React", "Go"],
-        "desc": "GUI ฐานข้อมูลสมัยใหม่ พร้อมประวัติคำสั่ง การแสดงผล Schema และการทำงานร่วมกันแบบเรียลไทม์",
-        "github": "#",
-        "live": "#"
+        "name": "NakhonFit",
+        "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
+        "desc": "เว็บไซต์สำหรับค้นหาฟิตเนสและยิมในจังหวัดนครปฐม พร้อมข้อมูลรีวิวและแผนที่นำทาง",
+        "github": "https://github.com/kheerathep/web-app-project-Fitness#", "live": "https://projectwebapp-21778896-214e7.web.app/"
       },
       {
-        "name": "Blaze API Gateway",
-        "tags": ["Node.js", "Redis", "Docker"],
-        "desc": "API Gateway ประสิทธิภาพสูง รองรับ 50,000 req/s พร้อม Rate Limiting, Auth และ Dashboard วิเคราะห์",
-        "github": "#",
-        "live": "#"
-      },
-      {
-        "name": "DevCollab",
-        "tags": ["Next.js", "PostgreSQL", "Stripe"],
-        "desc": "แพลตฟอร์ม Subscription เชื่อมต่อนักพัฒนามือใหม่กับซีเนียร์เพื่อ Code Review แบบ Async",
-        "github": "#",
-        "live": "#"
-      },
-      {
-        "name": "create-ts-app",
-        "tags": ["TypeScript", "CLI", "npm"],
-        "desc": "CLI สร้างโปรเจกต์ TypeScript แบบ Opinionated ดาวน์โหลดบน npm กว่า 2,000 ครั้ง/สัปดาห์",
-        "github": "#",
-        "live": "#"
+        "name": "Portfolio Website",
+        "tags": ["html", "css", "javascript","Json"],
+        "desc": "เว็บไซต์ Portfolio ของฉัน แสดงผลงานและประสบการณ์การทำงาน",
+        "github": "https://github.com/kheerathep", "live": "https://kheerathep-portfolio.web.app/"
       }
     ]
   },
@@ -138,65 +174,30 @@
   "experience": {
     "en": [
       {
-        "date": "2022 — Now",
-        "role": "Senior Full-Stack Engineer",
-        "company": "Stripe · San Francisco",
-        "desc": "Led internal developer tooling used by 200+ engineers. Reduced build times by 60%."
-      },
-      {
-        "date": "2020 — 2022",
-        "role": "Software Engineer",
-        "company": "Vercel · Remote",
-        "desc": "Built core deployment pipeline features. Contributed to Next.js open source."
-      },
-      {
-        "date": "2019 — 2020",
-        "role": "Frontend Developer",
-        "company": "Startup · Berlin",
-        "desc": "Architected a 40-component design system and established Playwright testing practices."
-      },
-      {
-        "date": "2018 — 2019",
-        "role": "Junior Developer",
-        "company": "Agency · London",
-        "desc": "Built client websites and e-commerce solutions. First exposure to TypeScript and Node.js."
+        "date": "2024 — Present",
+        "role": "Student ",
+        "company": "University of Silpakorn · Nakhon Pathom",
+        "desc": "Studying Computer Science at University of Silpakorn."
       }
     ],
     "th": [
       {
-        "date": "2022 — ปัจจุบัน",
-        "role": "วิศวกร Full-Stack อาวุโส",
-        "company": "Stripe · ซานฟรานซิสโก",
-        "desc": "นำทีมพัฒนาเครื่องมือภายในที่วิศวกรกว่า 200 คนใช้งานทุกวัน ลดเวลา Build ลง 60%"
-      },
-      {
-        "date": "2020 — 2022",
-        "role": "วิศวกรซอฟต์แวร์",
-        "company": "Vercel · Remote",
-        "desc": "พัฒนาฟีเจอร์หลักของ Deployment Pipeline และมีส่วนร่วมใน Open Source Next.js"
-      },
-      {
-        "date": "2019 — 2020",
-        "role": "นักพัฒนา Frontend",
-        "company": "Startup · เบอร์ลิน",
-        "desc": "ออกแบบ Design System ที่มี 40+ คอมโพเนนต์จากศูนย์ และสร้างแนวทาง Testing ด้วย Playwright"
-      },
-      {
-        "date": "2018 — 2019",
-        "role": "นักพัฒนา Junior",
-        "company": "Agency · ลอนดอน",
-        "desc": "พัฒนาเว็บไซต์และ E-Commerce สำหรับลูกค้า เริ่มต้นเรียนรู้ TypeScript และ Node.js"
+        "date": "2024 — ปัจจุบัน",
+        "role": "นักศึกษา",
+        "company": "มหาวิทยาลัยศิลปากร · นครปฐม",
+        "desc": "เรียนสาขาวิทยาการคอมพิวเตอร์ ที่มหาวิทยาลัยศิลปากร"
       }
     ]
   },
 
   "contact": {
-    "email": "alex@example.com",
-    "github": "github.com/alexchen",
-    "linkedin": "linkedin.com/in/alexchen"
+    "email": "kheerathep@gmail.com",
+    "github": "github.com/kheerathep",
+    "linkedin": "linkedin.com/in/kheerathep",
+    "line": "line.me/ti/p/~kheerathep"
   },
 
   "footer": {
-    "copy": "© 2025 Alex Chen"
+    "copy": "© 2025 Kheerathep. All rights reserved."
   }
 }

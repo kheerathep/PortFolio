@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Alex Chen — Developer</title>
+<title>Kheerathep Portfolio</title>
 
 <!-- Tailwind CDN + custom config -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -43,37 +43,43 @@
 <!-- ════════════════════════════════════════
      NAV
 ════════════════════════════════════════ -->
-<nav class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-ink/90 backdrop-blur-md">
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-md">
   <div class="max-w-[680px] mx-auto px-8 h-[50px] flex items-center justify-between">
 
     <a href="#" class="font-display text-[1.05rem] font-medium text-bright tracking-tight no-underline">
-      Alex Chen
+      Kheerathep
     </a>
 
-    <div class="flex items-center gap-8">
+    <div class="flex items-center gap-5">
       <!-- Nav links -->
-      <ul class="hidden md:flex gap-8 list-none">
-        <li>
-          <a id="navSkills" href="#skills"
-            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
-          </a>
-        </li>
-        <li>
-          <a id="navWork" href="#projects"
-            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
-          </a>
-        </li>
-        <li>
-          <a id="navExperience" href="#experience"
-            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
-          </a>
-        </li>
-        <li>
-          <a id="navContact" href="#contact"
-            class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase">
-          </a>
-        </li>
+      <ul class="hidden md:flex gap-7 list-none">
+        <li><a id="navSkills"     href="#skills"     class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
+        <li><a id="navWork"       href="#projects"   class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
+        <li><a id="navExperience" href="#experience" class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
+        <li><a id="navContact"    href="#contact"    class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
       </ul>
+
+      <!-- Theme toggle -->
+      <button id="btnTheme" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
+        <!-- Moon icon (shown in dark mode) -->
+        <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Sun icon (shown in light mode) -->
+        <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1"  x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
 
       <!-- Language toggle -->
       <div class="flex items-center border border-border overflow-hidden flex-shrink-0">
@@ -100,23 +106,19 @@
   <!-- ── HERO ── -->
   <section id="hero" class="pt-36 pb-24 border-b border-border">
 
-    <!-- Status badge -->
     <div class="flex items-center gap-2.5 text-mid mb-10 animate-fade-up-1">
       <span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80] status-dot"></span>
       <span id="heroStatus" class="text-[11px] tracking-widest uppercase"></span>
     </div>
 
-    <!-- Headline -->
     <h1 id="heroTitle"
       class="font-display text-[clamp(2.4rem,6vw,4rem)] font-normal leading-[1.15] tracking-tight text-bright mb-7 animate-fade-up-2">
     </h1>
 
-    <!-- Description -->
     <p id="heroDesc"
       class="text-[13px] text-soft leading-[1.9] max-w-[460px] mb-12 animate-fade-up-3">
     </p>
 
-    <!-- CTA buttons -->
     <div class="flex gap-6 items-center animate-fade-up-4">
       <a id="btnWork" href="#projects"
         class="btn-text inline-block px-6 py-2.5 bg-bright text-ink border border-bright
@@ -130,20 +132,15 @@
   </section>
 
   <!-- ── STATS ── -->
-  <div class="grid grid-cols-4 border-b border-border">
-    <div class="py-5 pr-4 border-r border-border">
-      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="6">0</span>
-      <span class="stat-label text-mid" data-stat-key="years"></span>
-    </div>
+  <div class="grid grid-cols-3 border-b border-border">
     <div class="py-5 px-4 border-r border-border">
       <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="48">0</span>
+        data-count="1">0</span>
       <span class="stat-label text-mid" data-stat-key="projects"></span>
     </div>
     <div class="py-5 px-4 border-r border-border">
       <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="12">0</span>
+        data-count="0">0</span>
       <span class="stat-label text-mid" data-stat-key="clients"></span>
     </div>
     <div class="py-5 pl-4">
@@ -157,8 +154,7 @@
   <section id="skills" class="py-22 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">01</span>
-      <h2 id="secSkills"
-        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+      <h2 id="secSkills" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
     </div>
     <div id="skillsList"></div>
   </section>
@@ -167,8 +163,7 @@
   <section id="projects" class="py-22 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">02</span>
-      <h2 id="secWork"
-        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+      <h2 id="secWork" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
     </div>
     <div id="projectsList"></div>
   </section>
@@ -177,8 +172,7 @@
   <section id="experience" class="py-22 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">03</span>
-      <h2 id="secExp"
-        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+      <h2 id="secExp" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
     </div>
     <div id="expList"></div>
   </section>
@@ -187,13 +181,11 @@
   <section id="contact" class="py-22">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">04</span>
-      <h2 id="secContact"
-        class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
+      <h2 id="secContact" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
 
-      <!-- Contact info -->
       <div>
         <p id="contactHeading"
           class="font-display text-[1.3rem] leading-[1.6] font-normal text-bright mb-8"></p>
@@ -213,20 +205,17 @@
         </div>
       </div>
 
-      <!-- Contact form -->
       <form id="contactForm" class="flex flex-col gap-5">
         <div class="grid grid-cols-2 gap-5">
           <div class="flex flex-col gap-1.5">
-            <label id="labelName"
-              class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+            <label id="labelName" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
             <input id="fName" type="text"
               class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
                      outline-none placeholder-mid focus:border-soft transition-colors duration-150"
               autocomplete="off"/>
           </div>
           <div class="flex flex-col gap-1.5">
-            <label id="labelEmail"
-              class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+            <label id="labelEmail" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
             <input id="fEmail" type="email"
               class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
                      outline-none placeholder-mid focus:border-soft transition-colors duration-150"
@@ -234,8 +223,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-1.5">
-          <label id="labelMsg"
-            class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
+          <label id="labelMsg" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
           <textarea id="fMsg" rows="5"
             class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
                    outline-none placeholder-mid focus:border-soft transition-colors duration-150 resize-none">
@@ -250,7 +238,7 @@
     </div>
   </section>
 
-</div><!-- /max-w wrapper -->
+</div>
 
 <!-- ════════════════════════════════════════
      FOOTER
@@ -259,17 +247,13 @@
   <div class="max-w-[680px] mx-auto px-8 flex justify-between items-center">
     <span id="footerCopy" class="text-[11px] text-mid"></span>
     <div class="flex gap-6">
-      <a id="footerGithub"   href="#"
-        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
-      <a id="footerLinkedin" href="#"
-        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
-      <a id="footerResume"   href="#"
-        class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerGithub"   href="https://github.com/kheerathep" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerLinkedin" href="https://linkedin.com/in/kheerathep" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerResume"   href="#" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
     </div>
   </div>
 </footer>
 
-<!-- External JS (loads data.json internally) -->
 <script src="portfolio.js"></script>
 
 </body>
