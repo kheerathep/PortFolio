@@ -3,11 +3,11 @@
     "hero": {
       "en": {
         "title": "Full-stack Dev <br> building thoughtful software",
-        "desc": "Designing and developing web apps, APIs, and software with clarity and efficiency — working with clients worldwide."
+        "desc": "I design and develop websites (Landing Page), backend systems, and APIs with a focus on simplicity, performance, and responsiveness — helping you turn ideas into real, usable projects."
       },
       "th": {
         "title": "Full-stack Dev <br> สร้างซอฟต์แวร์ที่ใส่ใจในรายละเอียด",
-        "desc": "รับออกแบบและพัฒนาเว็บแอปพลิเคชัน, API และแอปพลิเคชั้น โดยเน้นความชัดเจน ประสิทธิภาพ — ทำงานกับลูกค้าทั่วโลก"
+        "desc": "รับออกแบบและพัฒนาเว็บไซต์ (Landing Page), ระบบหลังบ้าน และ API โดยเน้นความเรียบง่าย ประสิทธิภาพสูง และรองรับการแสดงผลทุกหน้าจอ — พร้อมช่วยคุณเปลี่ยนไอเดียให้กลายเป็นโปรเจกต์ที่ใช้งานได้จริง"
       }
     },
     "contactHeading": {
@@ -146,27 +146,16 @@
         "name": "NakhonFit",
         "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
         "desc": "A modern database GUI with query history, schema visualization, and real-time collaboration.",
-        "github": "#", "live": "#"
-      },
-      {
-        "name": "Portfolio Website",
-        "tags": ["html", "css", "javascript","Json"],
-        "desc": "My personal portfolio website showcasing my projects and work experience.",
-        "github": "https://github.com/kheerathep", "live": "https://kheerathep-portfolio.web.app/"
+        "github": "https://github.com/kheerathep/web-app-project-Fitness", "live": "https://projectwebapp-21778896-214e7.web.app/"
       }
+      
     ],
     "th": [
       {
         "name": "NakhonFit",
         "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
         "desc": "เว็บไซต์สำหรับค้นหาฟิตเนสและยิมในจังหวัดนครปฐม พร้อมข้อมูลรีวิวและแผนที่นำทาง",
-        "github": "https://github.com/kheerathep/web-app-project-Fitness#", "live": "#"
-      },
-      {
-        "name": "Portfolio Website",
-        "tags": ["html", "css", "javascript","Json"],
-        "desc": "เว็บไซต์ Portfolio ของฉัน แสดงผลงานและประสบการณ์การทำงาน",
-        "github": "https://github.com/kheerathep", "live": "#"
+        "github": "https://github.com/kheerathep/web-app-project-Fitness", "live": "https://projectwebapp-21778896-214e7.web.app/"
       }
     ]
   },

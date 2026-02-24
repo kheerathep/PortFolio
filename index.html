@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Kheerathep Portfolio</title>
 
-<!-- Tailwind CDN + custom config -->
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -25,6 +25,24 @@
           serif: ['"EB Garamond"', 'serif'],
           thai:  ['Sarabun', 'sans-serif'],
         },
+        maxWidth: { reading: '680px' },
+        keyframes: {
+          fadeUp: {
+            '0%':   { opacity: '0', transform: 'translateY(14px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+          },
+          pulse2: {
+            '0%,100%': { opacity: '1' },
+            '50%':     { opacity: '0.2' },
+          },
+        },
+        animation: {
+          'fade-up-1': 'fadeUp 0.45s 0.05s both',
+          'fade-up-2': 'fadeUp 0.45s 0.15s both',
+          'fade-up-3': 'fadeUp 0.45s 0.25s both',
+          'fade-up-4': 'fadeUp 0.45s 0.35s both',
+          'pulse2':    'pulse2 2.5s ease infinite',
+        },
       },
     },
   }
@@ -34,124 +52,191 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Geist+Mono:wght@300;400;500&family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- External CSS -->
-<link rel="stylesheet" href="portfolio.css">
+<!-- ════════════════════════════════════
+  STYLE — เฉพาะสิ่งที่ Tailwind ทำไม่ได้:
+  · CSS vars สำหรับ dark/light switching
+  · font switching ตาม lang class
+  · scrollbar, scroll-reveal, icon toggle
+════════════════════════════════════ -->
+<style>
+/* ── Theme vars: Dark ── */
+:root {
+  --bg:     #111110; --surf:   #161615; --bd:    #222220;
+  --mid:    #555552; --soft:   #888884; --dim:   #d4d4d0;
+  --bright: #f0f0ec; --nav:    rgba(17,17,16,.9);
+  --sk:     #111110; --sk-h:   #161615;
+  --inv:    invert(1) brightness(1.8);
+}
+/* ── Theme vars: Light ── */
+html.light {
+  --bg:     #f8f8f6; --surf:   #eeeeea; --bd:    #ddddd8;
+  --mid:    #999994; --soft:   #666662; --dim:   #2a2a28;
+  --bright: #111110; --nav:    rgba(248,248,246,.9);
+  --sk:     #f8f8f6; --sk-h:   #eeeeea;
+  --inv:    none;
+}
+
+/* ── Tailwind color classes → vars ── */
+body           { background-color:var(--bg); color:var(--dim); }
+nav            { background-color:var(--nav) !important; }
+.bg-ink        { background-color:var(--bg)      !important; }
+.bg-surface    { background-color:var(--surf)    !important; }
+.bg-border     { background-color:var(--bd)      !important; }
+.bg-bright     { background-color:var(--bright)  !important; }
+.text-bright   { color:var(--bright) !important; }
+.text-dim      { color:var(--dim)    !important; }
+.text-mid      { color:var(--mid)    !important; }
+.text-soft     { color:var(--soft)   !important; }
+.text-ink      { color:var(--bg)     !important; }
+.border-border { border-color:var(--bd)     !important; }
+.border-bright { border-color:var(--bright) !important; }
+
+/* hover overrides */
+.hover\:bg-dim:hover      { background-color:var(--dim)  !important; color:var(--bg) !important; }
+.hover\:border-dim:hover  { border-color:var(--dim)      !important; }
+.hover\:text-bright:hover { color:var(--bright)          !important; }
+.hover\:border-soft:hover { border-color:var(--soft)     !important; }
+
+/* skill cards */
+.skill-card       { background-color:var(--sk); }
+.skill-card:hover { background-color:var(--sk-h); }
+.icon-inv         { filter:var(--inv,none); }
+
+/* ── Smooth transition on theme change ── */
+body, nav, .skill-card,
+.bg-ink, .bg-surface, .bg-bright, .bg-border,
+.text-bright, .text-dim, .text-mid, .text-soft,
+.border-border, .border-bright {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+/* ── Fonts by language ── */
+html.lang-en body          { font-family:'Geist Mono',monospace; }
+html.lang-th body          { font-family:'Sarabun',sans-serif; font-size:14px; }
+html.lang-en .font-display { font-family:'EB Garamond',serif; }
+html.lang-th .font-display { font-family:'Sarabun',sans-serif; font-weight:500; }
+html.lang-en .nav-link     { font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:.07em; text-transform:uppercase; }
+html.lang-th .nav-link     { font-family:'Sarabun',sans-serif; font-size:13px; }
+html.lang-en .btn-text     { font-family:'Geist Mono',monospace; font-size:11px; letter-spacing:.07em; text-transform:uppercase; }
+html.lang-th .btn-text     { font-family:'Sarabun',sans-serif; font-size:13px; letter-spacing:0; text-transform:none; }
+html.lang-en .stat-label   { font-size:10px; letter-spacing:.09em; text-transform:uppercase; }
+html.lang-th .stat-label   { font-family:'Sarabun',sans-serif; font-size:11px; }
+html.lang-en .sec-label    { font-size:11px; letter-spacing:.06em; }
+html.lang-th .sec-label    { font-family:'Sarabun',sans-serif; font-size:12px; }
+html.lang-th .proj-desc,
+html.lang-th .exp-desc     { font-size:13px; line-height:1.9; }
+html.lang-th h1            { letter-spacing:0; line-height:1.45; }
+html.lang-th h1 em         { font-style:normal; }
+html.lang-en h1            { font-family:'EB Garamond',serif; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width:3px; }
+::-webkit-scrollbar-track { background:var(--bg); }
+::-webkit-scrollbar-thumb { background:var(--bd); }
+
+/* ── Scroll-reveal ── */
+.anim-row      { opacity:0; transform:translateY(6px); transition:opacity .35s ease,transform .35s ease; }
+.anim-row.vis  { opacity:1; transform:none; }
+
+/* ── Theme button ── */
+#btnTheme {
+  display:flex; align-items:center; justify-content:center;
+  width:32px; height:32px; flex-shrink:0;
+  border:1px solid var(--bd); background:transparent;
+  color:var(--mid); cursor:pointer;
+  transition:border-color .15s, color .15s;
+}
+#btnTheme:hover           { border-color:var(--soft); color:var(--bright); }
+#iconSun,#iconMoon        { width:15px; height:15px; pointer-events:none; }
+html:not(.light) #iconSun { display:none; }
+html.light      #iconMoon { display:none; }
+</style>
 </head>
 
-<body class="bg-ink text-dim text-[13px] leading-relaxed antialiased">
+<body class="text-[13px] leading-relaxed antialiased">
 
-<!-- ════════════════════════════════════════
-     NAV
-════════════════════════════════════════ -->
+<!-- ════════ NAV ════════ -->
 <nav class="fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-md">
-  <div class="max-w-[680px] mx-auto px-8 h-[50px] flex items-center justify-between">
+  <div class="max-w-reading mx-auto px-6 sm:px-8 h-[50px] flex items-center justify-between">
 
     <a href="#" class="font-display text-[1.05rem] font-medium text-bright tracking-tight no-underline">
       Kheerathep
     </a>
 
-    <div class="flex items-center gap-5">
-      <!-- Nav links -->
-      <ul class="hidden md:flex gap-7 list-none">
-        <li><a id="navSkills"     href="#skills"     class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
-        <li><a id="navWork"       href="#projects"   class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
-        <li><a id="navExperience" href="#experience" class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
-        <li><a id="navContact"    href="#contact"    class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline uppercase"></a></li>
+    <div class="flex items-center gap-4">
+      <ul class="hidden md:flex gap-7 list-none m-0 p-0">
+        <li><a id="navSkills"     href="#skills"     class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline"></a></li>
+        <li><a id="navWork"       href="#projects"   class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline"></a></li>
+        <li><a id="navExperience" href="#experience" class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline"></a></li>
+        <li><a id="navContact"    href="#contact"    class="nav-link text-mid hover:text-bright transition-colors duration-150 no-underline"></a></li>
       </ul>
 
-      <!-- Theme toggle -->
-      <button id="btnTheme" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
-        <!-- Moon icon (shown in dark mode) -->
-        <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Theme toggle 🌙/☀️ -->
+      <button id="btnTheme" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
-        <!-- Sun icon (shown in light mode) -->
-        <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1"  x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          <line x1="12" y1="1"  x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
       </button>
 
-      <!-- Language toggle -->
+      <!-- Lang toggle TH/EN -->
       <div class="flex items-center border border-border overflow-hidden flex-shrink-0">
         <button id="btnTh" onclick="setLang('th')"
-          class="bg-bright text-ink px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150">
-          TH
-        </button>
+          class="bg-bright text-ink px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150">TH</button>
         <div class="w-px bg-border self-stretch"></div>
         <button id="btnEn" onclick="setLang('en')"
-          class="bg-transparent text-mid px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150 hover:text-bright">
-          EN
-        </button>
+          class="bg-transparent text-mid px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase cursor-pointer transition-all duration-150 hover:text-bright">EN</button>
       </div>
     </div>
-
   </div>
 </nav>
 
-<!-- ════════════════════════════════════════
-     PAGE CONTENT
-════════════════════════════════════════ -->
-<div class="max-w-[680px] mx-auto px-8">
+<!-- ════════ PAGE ════════ -->
+<div class="max-w-reading mx-auto px-6 sm:px-8">
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section id="hero" class="pt-36 pb-24 border-b border-border">
-
     <div class="flex items-center gap-2.5 text-mid mb-10 animate-fade-up-1">
-      <span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80] status-dot"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-green-400 shadow-[0_0_6px_#4ade80] animate-pulse2"></span>
       <span id="heroStatus" class="text-[11px] tracking-widest uppercase"></span>
     </div>
-
     <h1 id="heroTitle"
-      class="font-display text-[clamp(2.4rem,6vw,4rem)] font-normal leading-[1.15] tracking-tight text-bright mb-7 animate-fade-up-2">
-    </h1>
-
-    <p id="heroDesc"
-      class="text-[13px] text-soft leading-[1.9] max-w-[460px] mb-12 animate-fade-up-3">
-    </p>
-
-    <div class="flex gap-6 items-center animate-fade-up-4">
+      class="font-display text-[clamp(2rem,6vw,4rem)] font-normal leading-[1.15] tracking-tight text-bright mb-7 animate-fade-up-2"></h1>
+    <p id="heroDesc" class="text-[13px] text-soft leading-[1.9] max-w-[460px] mb-12 animate-fade-up-3"></p>
+    <div class="flex flex-wrap gap-4 items-center animate-fade-up-4">
       <a id="btnWork" href="#projects"
         class="btn-text inline-block px-6 py-2.5 bg-bright text-ink border border-bright
-               hover:bg-dim hover:border-dim transition-colors duration-150 no-underline">
-      </a>
+               hover:bg-dim hover:border-dim transition-colors duration-150 no-underline"></a>
       <a id="btnContact" href="#contact"
         class="btn-text inline-block px-6 py-2.5 border border-border text-dim
-               hover:border-soft hover:text-bright transition-colors duration-150 no-underline">
-      </a>
+               hover:border-soft hover:text-bright transition-colors duration-150 no-underline"></a>
     </div>
   </section>
 
-  <!-- ── STATS ── -->
+  <!-- STATS -->
   <div class="grid grid-cols-3 border-b border-border">
-    <div class="py-5 px-4 border-r border-border">
-      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="1">0</span>
+    <div class="py-5 px-3 sm:px-4 border-r border-border">
+      <span class="font-display text-[2rem] sm:text-[2.2rem] font-normal text-bright block leading-none mb-1.5" data-count="1">0</span>
       <span class="stat-label text-mid" data-stat-key="projects"></span>
     </div>
-    <div class="py-5 px-4 border-r border-border">
-      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="0">0</span>
+    <div class="py-5 px-3 sm:px-4 border-r border-border">
+      <span class="font-display text-[2rem] sm:text-[2.2rem] font-normal text-bright block leading-none mb-1.5" data-count="0">0</span>
       <span class="stat-label text-mid" data-stat-key="clients"></span>
     </div>
-    <div class="py-5 pl-4">
-      <span class="font-display text-[2.2rem] font-normal text-bright block leading-none mb-1.5"
-        data-count="98">0</span>
+    <div class="py-5 px-3 sm:pl-4">
+      <span class="font-display text-[2rem] sm:text-[2.2rem] font-normal text-bright block leading-none mb-1.5" data-count="100">0</span>
       <span class="stat-label text-mid" data-stat-key="satisfaction"></span>
     </div>
   </div>
 
-  <!-- ── SKILLS ── -->
-  <section id="skills" class="py-22 border-b border-border">
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 sm:py-24 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">01</span>
       <h2 id="secSkills" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
@@ -159,8 +244,8 @@
     <div id="skillsList"></div>
   </section>
 
-  <!-- ── PROJECTS ── -->
-  <section id="projects" class="py-22 border-b border-border">
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 sm:py-24 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">02</span>
       <h2 id="secWork" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
@@ -168,8 +253,8 @@
     <div id="projectsList"></div>
   </section>
 
-  <!-- ── EXPERIENCE ── -->
-  <section id="experience" class="py-22 border-b border-border">
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-16 sm:py-24 border-b border-border">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">03</span>
       <h2 id="secExp" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
@@ -177,84 +262,68 @@
     <div id="expList"></div>
   </section>
 
-  <!-- ── CONTACT ── -->
-  <section id="contact" class="py-22">
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 sm:py-24">
     <div class="flex items-baseline gap-5 mb-12">
       <span class="sec-label text-mid">04</span>
       <h2 id="secContact" class="font-display text-[1.5rem] font-normal text-bright tracking-tight"></h2>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
       <div>
-        <p id="contactHeading"
-          class="font-display text-[1.3rem] leading-[1.6] font-normal text-bright mb-8"></p>
+        <p id="contactHeading" class="font-display text-[1.3rem] leading-[1.6] font-normal text-bright mb-8"></p>
         <div class="flex flex-col">
-          <a id="contactEmail" href="mailto:alex@example.com"
+          <a id="contactEmail" href="mailto:kheerathep@gmail.com"
             class="flex justify-between items-center py-3.5 border-t border-border text-soft
-                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
-          </a>
-          <a id="contactGithub" href="https://github.com" target="_blank"
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150"></a>
+          <a id="contactGithub" href="https://github.com/kheerathep" target="_blank"
             class="flex justify-between items-center py-3.5 border-t border-border text-soft
-                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
-          </a>
-          <a id="contactLinkedin" href="https://linkedin.com" target="_blank"
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150"></a>
+          <a id="contactLinkedin" href="https://linkedin.com/in/kheerathep" target="_blank"
             class="flex justify-between items-center py-3.5 border-t border-b border-border text-soft
-                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150">
-          </a>
+                   text-[12px] no-underline hover:text-bright hover:pl-2 transition-all duration-150"></a>
         </div>
       </div>
-
       <form id="contactForm" class="flex flex-col gap-5">
         <div class="grid grid-cols-2 gap-5">
           <div class="flex flex-col gap-1.5">
             <label id="labelName" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
-            <input id="fName" type="text"
+            <input id="fName" type="text" autocomplete="off"
               class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
-                     outline-none placeholder-mid focus:border-soft transition-colors duration-150"
-              autocomplete="off"/>
+                     outline-none focus:border-soft transition-colors duration-150"/>
           </div>
           <div class="flex flex-col gap-1.5">
             <label id="labelEmail" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
-            <input id="fEmail" type="email"
+            <input id="fEmail" type="email" autocomplete="off"
               class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
-                     outline-none placeholder-mid focus:border-soft transition-colors duration-150"
-              autocomplete="off"/>
+                     outline-none focus:border-soft transition-colors duration-150"/>
           </div>
         </div>
         <div class="flex flex-col gap-1.5">
           <label id="labelMsg" class="text-[10px] text-mid tracking-widest uppercase sec-label"></label>
           <textarea id="fMsg" rows="5"
             class="bg-transparent border-0 border-b border-border text-dim text-[12px] py-2
-                   outline-none placeholder-mid focus:border-soft transition-colors duration-150 resize-none">
-          </textarea>
+                   outline-none focus:border-soft transition-colors duration-150 resize-none"></textarea>
         </div>
         <button id="submitBtn" type="submit"
           class="btn-text self-start px-6 py-2.5 bg-bright text-ink border border-bright
-                 hover:bg-dim hover:border-dim transition-colors duration-150 cursor-pointer">
-        </button>
+                 hover:bg-dim hover:border-dim transition-colors duration-150 cursor-pointer"></button>
       </form>
-
     </div>
   </section>
-
 </div>
 
-<!-- ════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="border-t border-border py-7">
-  <div class="max-w-[680px] mx-auto px-8 flex justify-between items-center">
+  <div class="max-w-reading mx-auto px-6 sm:px-8 flex flex-wrap justify-between items-center gap-4">
     <span id="footerCopy" class="text-[11px] text-mid"></span>
     <div class="flex gap-6">
-      <a id="footerGithub"   href="https://github.com/kheerathep" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerGithub"   href="https://github.com/kheerathep"      class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
       <a id="footerLinkedin" href="https://linkedin.com/in/kheerathep" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
-      <a id="footerResume"   href="#" class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
+      <a id="footerResume"   href="#"                                   class="text-[11px] text-mid no-underline hover:text-bright transition-colors duration-150"></a>
     </div>
   </div>
 </footer>
 
 <script src="portfolio.js"></script>
-
 </body>
 </html>
