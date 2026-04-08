@@ -15,78 +15,192 @@
       "th": "รับงานฟรีแลนซ์"
     },
     "form": {
-      "en": { "name": "",    "email": "",  "msg": "Tell me about your project..." },
-      "th": { "name": "", "email": "",  "msg": "บอกเล่าเกี่ยวกับโปรเจกต์ของคุณ..." }
+      "en": {
+        "name": "",
+        "email": "",
+        "msg": "Tell me about your project..."
+      },
+      "th": {
+        "name": "",
+        "email": "",
+        "msg": "บอกเล่าเกี่ยวกับโปรเจกต์ของคุณ..."
+      }
     },
     "nav": {
-      "skills":     { "en": "Skills",      "th": "ทักษะ" },
-      "work":       { "en": "Work",        "th": "ผลงาน" },
-      "experience": { "en": "Exp.",        "th": "ประสบการณ์" },
-      "contact":    { "en": "Contact",     "th": "ติดต่อ" }
+      "skills": {
+        "en": "Skills",
+        "th": "ทักษะ"
+      },
+      "work": {
+        "en": "Work",
+        "th": "ผลงาน"
+      },
+      "experience": {
+        "en": "Exp.",
+        "th": "ประสบการณ์"
+      },
+      "contact": {
+        "en": "Contact",
+        "th": "ติดต่อ"
+      }
     },
-    "status":     { "en": "Available for work", "th": "พร้อมรับงานใหม่" },
-    "btnWork":    { "en": "View work",    "th": "ดูผลงาน" },
-    "btnContact": { "en": "Get in touch", "th": "ติดต่อฉัน" },
-    "btnSend":    { "en": "Send",         "th": "ส่งข้อความ" },
-    "btnSent":    { "en": "Sent ✓",       "th": "ส่งแล้ว ✓" },
-    "secSkills":  { "en": "Skills & Tools", "th": "ทักษะและเครื่องมือ" },
-    "secWork":    { "en": "Selected work","th": "ผลงานที่เลือก" },
-    "secExp":     { "en": "Experience",   "th": "ประสบการณ์" },
-    "secContact": { "en": "Get in touch", "th": "ติดต่อฉัน" },
-    "liveLbl":    { "en": "Live ↗",       "th": "ดูสด ↗" },
-    "githubLbl":  { "en": "GitHub ↗",     "th": "GitHub ↗" },
+    "status": {
+      "en": "Available for work",
+      "th": "พร้อมรับงานใหม่"
+    },
+    "btnWork": {
+      "en": "View work",
+      "th": "ดูผลงาน"
+    },
+    "btnContact": {
+      "en": "Get in touch",
+      "th": "ติดต่อฉัน"
+    },
+    "btnSend": {
+      "en": "Send",
+      "th": "ส่งข้อความ"
+    },
+    "btnSent": {
+      "en": "Sent ✓",
+      "th": "ส่งแล้ว ✓"
+    },
+    "secSkills": {
+      "en": "Skills & Tools",
+      "th": "ทักษะและเครื่องมือ"
+    },
+    "secWork": {
+      "en": "Selected work",
+      "th": "ผลงานที่เลือก"
+    },
+    "secExp": {
+      "en": "Experience",
+      "th": "ประสบการณ์"
+    },
+    "secContact": {
+      "en": "Get in touch",
+      "th": "ติดต่อฉัน"
+    },
+    "liveLbl": {
+      "en": "Live ↗",
+      "th": "ดูสด ↗"
+    },
+    "githubLbl": {
+      "en": "GitHub ↗",
+      "th": "GitHub ↗"
+    },
     "skillGroups": {
-      "languages": { "en": "Languages",   "th": "ภาษา" },
-      "frontend":  { "en": "Frontend",    "th": "Frontend" },
-      "backend":   { "en": "Backend",     "th": "Backend" },
-      "tools":     { "en": "Tools",       "th": "เครื่องมือ" }
+      "languages": {
+        "en": "Languages",
+        "th": "ภาษา"
+      },
+      "frontend": {
+        "en": "Frontend",
+        "th": "Frontend"
+      },
+      "backend": {
+        "en": "Backend",
+        "th": "Backend"
+      },
+      "tools": {
+        "en": "Tools",
+        "th": "เครื่องมือ"
+      }
     },
     "stats": {
-      "years":        { "en": "Years exp.",   "th": "ปีประสบการณ์" },
-      "projects":     { "en": "Projects",     "th": "โปรเจกต์" },
-      "clients":      { "en": "Clients",      "th": "ลูกค้า" },
-      "satisfaction": { "en": "Satisfaction", "th": "% ความพึงพอใจ" }
+      "years": {
+        "en": "Years exp.",
+        "th": "ปีประสบการณ์"
+      },
+      "projects": {
+        "en": "Projects",
+        "th": "โปรเจกต์"
+      },
+      "clients": {
+        "en": "Clients",
+        "th": "ลูกค้า"
+      },
+      "satisfaction": {
+        "en": "Satisfaction",
+        "th": "% ความพึงพอใจ"
+      }
     },
     "footer": {
-      "github":   { "en": "GitHub",   "th": "GitHub" },
-      "linkedin": { "en": "LinkedIn", "th": "LinkedIn" },
-      "resume":   { "en": "Resume",   "th": "เรซูเม่" }
+      "github": {
+        "en": "GitHub",
+        "th": "GitHub"
+      },
+      "linkedin": {
+        "en": "LinkedIn",
+        "th": "LinkedIn"
+      },
+      "resume": {
+        "en": "Resume",
+        "th": "เรซูเม่"
+      }
     }
   },
-
   "stats": [
-    { "key": "years",        "value": 6  },
-    { "key": "projects",     "value": 48 },
-    { "key": "clients",      "value": 12 },
-    { "key": "satisfaction", "value": 98 }
+    {
+      "key": "years",
+      "value": 6
+    },
+    {
+      "key": "projects",
+      "value": 48
+    },
+    {
+      "key": "clients",
+      "value": 12
+    },
+    {
+      "key": "satisfaction",
+      "value": 98
+    }
   ],
-
   "skillGroups": [
     {
       "key": "languages",
       "skills": [
         {
-          "label": { "en": "HTML5",       "th": "HTML5" },
+          "label": {
+            "en": "HTML5",
+            "th": "HTML5"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
         },
         {
-          "label": { "en": "CSS3",        "th": "CSS3" },
+          "label": {
+            "en": "CSS3",
+            "th": "CSS3"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
         },
         {
-          "label": { "en": "JavaScript",  "th": "JavaScript" },
+          "label": {
+            "en": "JavaScript",
+            "th": "JavaScript"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         },
         {
-          "label": { "en": "TypeScript",  "th": "TypeScript" },
+          "label": {
+            "en": "TypeScript",
+            "th": "TypeScript"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
         },
         {
-          "label": { "en": "Java",        "th": "Java" },
+          "label": {
+            "en": "Java",
+            "th": "Java"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
         },
         {
-          "label": { "en": "SQL",         "th": "SQL" },
+          "label": {
+            "en": "SQL",
+            "th": "SQL"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
         }
       ]
@@ -95,11 +209,17 @@
       "key": "frontend",
       "skills": [
         {
-          "label": { "en": "React",       "th": "React" },
+          "label": {
+            "en": "React",
+            "th": "React"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
         },
         {
-          "label": { "en": "Tailwind CSS","th": "Tailwind CSS" },
+          "label": {
+            "en": "Tailwind CSS",
+            "th": "Tailwind CSS"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
         }
       ]
@@ -108,11 +228,17 @@
       "key": "backend",
       "skills": [
         {
-          "label": { "en": "Node.js",     "th": "Node.js" },
+          "label": {
+            "en": "Node.js",
+            "th": "Node.js"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
         },
         {
-          "label": { "en": "Firebase",    "th": "Firebase" },
+          "label": {
+            "en": "Firebase",
+            "th": "Firebase"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
         }
       ]
@@ -121,45 +247,85 @@
       "key": "tools",
       "skills": [
         {
-          "label": { "en": "Git",         "th": "Git" },
+          "label": {
+            "en": "Git",
+            "th": "Git"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
         },
         {
-          "label": { "en": "GitHub",      "th": "GitHub" },
+          "label": {
+            "en": "GitHub",
+            "th": "GitHub"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
         },
         {
-          "label": { "en": "VS Code",     "th": "VS Code" },
+          "label": {
+            "en": "VS Code",
+            "th": "VS Code"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
         },
         {
-          "label": { "en": "Visual Studio","th": "Visual Studio" },
+          "label": {
+            "en": "Visual Studio",
+            "th": "Visual Studio"
+          },
           "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
         }
       ]
     }
   ],
-
   "projects": {
     "en": [
       {
         "name": "NakhonFit",
-        "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
+        "tags": [
+          "html",
+          "javascript",
+          "Tailwind CSS",
+          "Json"
+        ],
         "desc": "A modern database GUI with query history, schema visualization, and real-time collaboration.",
-        "github": "https://github.com/kheerathep/web-app-project-Fitness", "live": "https://projectwebapp-21778896-214e7.web.app/"
+        "github": "https://github.com/kheerathep/web-app-project-Fitness",
+        "live": "https://projectwebapp-21778896-214e7.web.app/"
+      },
+      {
+        "name": "carcare-pro",
+        "tags": [
+          "TypeScript"
+        ],
+        "desc": "A web application for managing car maintenance information.",
+        "github": "https://github.com/kheerathep/carcare-pro",
+        "live": "https://carcare-pro.vercel.app/login"
       }
-      
     ],
     "th": [
       {
         "name": "NakhonFit",
-        "tags": ["html", "css", "javascript","Tailwind CSS","Json"],
+        "tags": [
+          "html",
+          "css",
+          "javascript",
+          "Tailwind CSS",
+          "Json"
+        ],
         "desc": "เว็บไซต์สำหรับค้นหาฟิตเนสและยิมในจังหวัดนครปฐม พร้อมข้อมูลรีวิวและแผนที่นำทาง",
-        "github": "https://github.com/kheerathep/web-app-project-Fitness", "live": "https://projectwebapp-21778896-214e7.web.app/"
+        "github": "https://github.com/kheerathep/web-app-project-Fitness",
+        "live": "https://projectwebapp-21778896-214e7.web.app/"
+      },
+      {
+        "name": "carcare-pro",
+        "tags": [
+          "TypeScript"
+        ],
+        "desc": "เว็บไซต์สำหรับจัดการข้อมูลการซ่อมบำรุงรถยนต์",
+        "github": "https://github.com/kheerathep/carcare-pro",
+        "live": "https://carcare-pro.vercel.app/login"
       }
     ]
   },
-
   "experience": {
     "en": [
       {
@@ -178,14 +344,12 @@
       }
     ]
   },
-
   "contact": {
     "email": "kheerathep@gmail.com",
     "github": "github.com/kheerathep",
     "linkedin": "linkedin.com/in/kheerathep",
     "line": "line.me/ti/p/~kheerathep"
   },
-
   "footer": {
     "copy": "© 2025 Kheerathep. All rights reserved."
   }
