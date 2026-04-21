@@ -309,7 +309,7 @@
         ],
         "desc": "A web application for game top up.",
         "github": "https://github.com/kheerathep/gametopup",
-        "live": "https://gametopup.vercel.app/login"
+        "live": "https://game-topup-snowy.vercel.app/"
       }
     ],
     "th": [
@@ -344,7 +344,7 @@
         ],
         "desc": "เว็บไซต์สำหรับเติมเงินเกม",
         "github": "https://github.com/kheerathep/gametopup",
-        "live": "https://gametopup.vercel.app/login"
+        "live": "https://game-topup-snowy.vercel.app/"
       }
     ]
   },
