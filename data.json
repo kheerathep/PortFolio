@@ -299,6 +299,17 @@
         "desc": "A web application for managing car maintenance information.",
         "github": "https://github.com/kheerathep/carcare-pro",
         "live": "https://carcare-pro.vercel.app/login"
+      },
+      {
+        "name": "gametopup",
+        "tags": [
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase"
+        ],
+        "desc": "A web application for game top up.",
+        "github": "https://github.com/kheerathep/gametopup",
+        "live": "https://gametopup.vercel.app/login"
       }
     ],
     "th": [
@@ -323,6 +334,17 @@
         "desc": "เว็บไซต์สำหรับจัดการข้อมูลการซ่อมบำรุงรถยนต์",
         "github": "https://github.com/kheerathep/carcare-pro",
         "live": "https://carcare-pro.vercel.app/login"
+      },
+      {
+        "name": "gametopup",
+        "tags": [
+          "TypeScript",
+          "Tailwind CSS",
+          "Supabase"
+        ],
+        "desc": "เว็บไซต์สำหรับเติมเงินเกม",
+        "github": "https://github.com/kheerathep/gametopup",
+        "live": "https://gametopup.vercel.app/login"
       }
     ]
   },
