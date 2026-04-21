@@ -52,7 +52,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Geist+Mono:wght@300;400;500&family=Sarabun:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Sarabun:wght@300;400;500;600&display=swap"
     rel="stylesheet">
 
   <!-- ════════════════════════════════════
@@ -64,32 +64,36 @@
   <style>
     /* ── Theme vars: Dark ── */
     :root {
-      --bg: #111110;
-      --surf: #161615;
-      --bd: #222220;
-      --mid: #555552;
-      --soft: #888884;
-      --dim: #d4d4d0;
-      --bright: #f0f0ec;
-      --nav: rgba(17, 17, 16, .9);
-      --sk: #111110;
-      --sk-h: #161615;
+      --bg: #030712;
+      --surf: #111827;
+      --bd: rgba(255, 255, 255, 0.08);
+      --mid: #9ca3af;
+      --soft: #d1d5db;
+      --dim: #e5e7eb;
+      --bright: #ffffff;
+      --nav: rgba(3, 7, 18, 0.65);
+      --sk: rgba(255, 255, 255, 0.03);
+      --sk-h: rgba(255, 255, 255, 0.08);
       --inv: invert(1) brightness(1.8);
+      --accent-1: #6366f1;
+      --accent-2: #8b5cf6;
     }
 
     /* ── Theme vars: Light ── */
     html.light {
-      --bg: #f8f8f6;
-      --surf: #eeeeea;
-      --bd: #ddddd8;
-      --mid: #999994;
-      --soft: #666662;
-      --dim: #2a2a28;
-      --bright: #111110;
-      --nav: rgba(248, 248, 246, .9);
-      --sk: #f8f8f6;
-      --sk-h: #eeeeea;
+      --bg: #ffffff;
+      --surf: #f3f4f6;
+      --bd: rgba(0, 0, 0, 0.15);
+      --mid: #4b5563;
+      --soft: #374151;
+      --dim: #111827;
+      --bright: #000000;
+      --nav: rgba(255, 255, 255, 0.85);
+      --sk: #ffffff;
+      --sk-h: #f3f4f6;
       --inv: none;
+      --accent-1: #4338ca;
+      --accent-2: #7e22ce;
     }
 
     /* ── Tailwind color classes → vars ── */
@@ -262,13 +266,15 @@
 
     html.lang-th .proj-desc,
     html.lang-th .exp-desc {
-      font-size: 13px;
-      line-height: 1.9;
+      font-size: 16px;
+      line-height: 1.8;
     }
 
     html.lang-th h1 {
       letter-spacing: 0;
-      line-height: 1.45;
+      line-height: 1.7;
+      padding-top: 15px;
+      padding-bottom: 5px;
     }
 
     html.lang-th h1 em {
@@ -276,7 +282,8 @@
     }
 
     html.lang-en h1 {
-      font-family: 'EB Garamond', serif;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
     }
 
     /* ── Scrollbar ── */
@@ -405,7 +412,7 @@
         <span id="heroStatus" class="text-[11px] tracking-widest uppercase"></span>
       </div>
       <h1 id="heroTitle"
-        class="font-display text-[clamp(2rem,6vw,4rem)] font-normal leading-[1.15] tracking-tight text-bright mb-7 animate-fade-up-2">
+        class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold tracking-tight text-bright mb-7 animate-fade-up-2 py-2">
       </h1>
       <p id="heroDesc" class="text-[13px] text-soft leading-[1.9] max-w-[460px] mb-12 animate-fade-up-3"></p>
       <div class="flex flex-wrap gap-4 items-center animate-fade-up-4">

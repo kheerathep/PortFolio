@@ -139,24 +139,6 @@
       }
     }
   },
-  "stats": [
-    {
-      "key": "years",
-      "value": 6
-    },
-    {
-      "key": "projects",
-      "value": 48
-    },
-    {
-      "key": "clients",
-      "value": 12
-    },
-    {
-      "key": "satisfaction",
-      "value": 98
-    }
-  ],
   "skillGroups": [
     {
       "key": "languages",
